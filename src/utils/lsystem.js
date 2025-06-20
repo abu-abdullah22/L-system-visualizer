@@ -21,6 +21,7 @@ export function drawLSystem(ctx, lsystem, { angle, lineLength }) {
   for (let char of lsystem) {
     switch (char) {
       case 'F':
+      case 'G':
         x += lineLength * Math.cos((dir * Math.PI) / 180);
         y += lineLength * Math.sin((dir * Math.PI) / 180);
         ctx.lineTo(x, y);
