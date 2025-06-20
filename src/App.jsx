@@ -34,7 +34,7 @@ export default function App() {
   const handleReset = () => setConfig(PRESETS.Tree);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row  h-auto md:h-screen overflow-x-hidden">
       <Sidebar config={config} setConfig={setConfig} onPreset={handlePreset} onReset={handleReset} />
       <CanvasRenderer config={config} />
       <HelpPanel />

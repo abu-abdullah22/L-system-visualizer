@@ -7,7 +7,14 @@ export default function CanvasRenderer({ config }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
     const lsystem = generateLSystem(config);
     drawLSystem(ctx, lsystem, config);
   }, [config]);
@@ -21,11 +28,11 @@ export default function CanvasRenderer({ config }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-white">
-      <canvas ref={canvasRef} width={800} height={600} className="border mb-2" />
+    <div className="flex flex-col items-center justify-center w-full md:w-2/3 bg-white">
+      <canvas ref={canvasRef} width={800} height={600} className="mb-2" />
       <button
         onClick={downloadImage}
-        className="bg-blue-600 text-white px-4 py-2 rounded"
+        className="bg-blue-600 text-white px-4 py-2 m-2 rounded"
       >
         Download PNG
       </button>

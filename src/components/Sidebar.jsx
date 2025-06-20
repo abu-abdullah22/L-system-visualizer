@@ -12,7 +12,7 @@ export default function Sidebar({ config, setConfig, onPreset, onReset }) {
 
       <div className="mb-4">
         <label>Examples:</label>
-        <select className="w-full p-2 " onChange={(e) => onPreset(e.target.value)}>
+        <select className="w-full p-2 border-2 rounded border-gray-500" onChange={(e) => onPreset(e.target.value)}>
           <option className='dark:text-black'>Tree</option>
           <option className='dark:text-black'>Koch Curve</option>
           <option className='dark:text-black'>Sierpinski Triangle</option>
