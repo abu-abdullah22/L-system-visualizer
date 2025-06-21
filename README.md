@@ -51,10 +51,10 @@ Then open your browser at [http://localhost:5173](http://localhost:5173).
 
 
 ```
+---
 
 ## 📂 Folder Structure
-
-.
+```bash
 ├── public/ # Static assets (e.g., screenshots)
 ├── src/
 │ ├── components/ # Sidebar, CanvasRenderer, HelpPanel
@@ -63,7 +63,7 @@ Then open your browser at [http://localhost:5173](http://localhost:5173).
 ├── index.html
 ├── tailwind.config.js
 └── vite.config.js
-
+```
 ---
 
 ## 📘 What is an L-System?
