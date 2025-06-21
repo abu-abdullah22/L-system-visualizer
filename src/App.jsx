@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import CanvasRenderer from './components/CanvasRenderer';
 import HelpPanel from './components/HelpPanel';
@@ -28,14 +28,27 @@ const PRESETS = {
 };
 
 export default function App() {
-  const [config, setConfig] = useState(PRESETS.Tree);
+  const [selectedExample, setSelectedExample] = useState('Tree');
+  const [config, setConfig] = useState(PRESETS[selectedExample]);
 
-  const handlePreset = (example) => setConfig(PRESETS[example]);
-  const handleReset = () => setConfig(PRESETS.Tree);
+  const handlePreset = (example) => {
+    setSelectedExample(example);
+    setConfig(PRESETS[example]);
+  };
+
+  const handleReset = () => {
+    setConfig(PRESETS[selectedExample]);
+  };
 
   return (
     <div className="flex flex-col md:flex-row  h-auto overflow-x-hidden">
-      <Sidebar config={config} setConfig={setConfig} onPreset={handlePreset} onReset={handleReset} />
+      <Sidebar
+        config={config}
+        setConfig={setConfig}
+        onPreset={handlePreset}
+        onReset={handleReset}
+        selectedExample={selectedExample} // 👈 Pass this
+      />
       <CanvasRenderer config={config} />
       <HelpPanel />
     </div>

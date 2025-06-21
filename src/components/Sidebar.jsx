@@ -1,4 +1,4 @@
-export default function Sidebar({ config, setConfig, onPreset, onReset }) {
+export default function Sidebar({ config, setConfig, onPreset, onReset, selectedExample}) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setConfig((prev) => ({ ...prev, [name]: value }));
@@ -6,11 +6,15 @@ export default function Sidebar({ config, setConfig, onPreset, onReset }) {
 
   return (
     <div className="p-4 w-full md:w-1/3 bg-gray-100 dark:bg-gray-800 overflow-y-auto">
-      <h2 className="text-xl font-bold mb-4">L-System Config</h2>
+      <h2 className="text-2xl font-bold mb-4">L-System Config</h2>
 
       <div className="mb-4">
         <label>Examples:</label>
-        <select className="w-full p-2 border-2 rounded border-gray-500" onChange={(e) => onPreset(e.target.value)}>
+        <select
+          value={selectedExample} 
+          className="w-full p-2 border-2 rounded border-gray-500"
+          onChange={(e) => onPreset(e.target.value)}
+        >
           <option className='dark:text-black'>Tree</option>
           <option className='dark:text-black'>Koch Curve</option>
           <option className='dark:text-black'>Sierpinski Triangle</option>
