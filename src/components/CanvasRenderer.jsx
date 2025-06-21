@@ -28,7 +28,7 @@ export default function CanvasRenderer({ config }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center md:w-2/3 bg-white h-auto xl:h-screen py-10 md:py-0">
+    <div className="flex flex-col items-center justify-center md:w-2/3 bg-white h-auto 2xl:h-screen py-10 md:py-0">
       <canvas ref={canvasRef} width={400} height={300} className="mb-2" />
       <button
         onClick={downloadImage}
