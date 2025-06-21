@@ -49,7 +49,8 @@ npm install
 npm run dev
 Then open your browser at [http://localhost:5173](http://localhost:5173).
 
----
+
+```
 
 ## 📂 Folder Structure
 
@@ -62,10 +63,6 @@ Then open your browser at [http://localhost:5173](http://localhost:5173).
 ├── index.html
 ├── tailwind.config.js
 └── vite.config.js
-
-yaml
-Copy
-Edit
 
 ---
 
