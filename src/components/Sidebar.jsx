@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Sidebar({ config, setConfig, onPreset, onReset }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -82,7 +80,7 @@ export default function Sidebar({ config, setConfig, onPreset, onReset }) {
         className="w-full p-2 mb-4 border-2 rounded border-gray-500 "
       />
 
-      <button onClick={onReset} className="w-full bg-red-400 text-white p-2 rounded">
+      <button onClick={onReset} className="w-full cursor-pointer bg-red-400 text-white p-2 rounded">
         Reset
       </button>
     </div>
